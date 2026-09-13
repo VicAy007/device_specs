@@ -53,7 +53,15 @@ class GaugeRingCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-              Text(trailingText, style: AppTypography.labelDataSm),
+              Flexible(
+                child: Text(
+                  trailingText,
+                  style: AppTypography.labelDataSm,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                  textAlign: TextAlign.right,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 4),
@@ -88,6 +96,8 @@ class GaugeRingCard extends StatelessWidget {
                       Text(
                         centerCaption,
                         textAlign: TextAlign.center,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
                         style:
                             AppTypography.uppercaseTiny.copyWith(fontSize: 9),
                       ),
@@ -105,11 +115,25 @@ class GaugeRingCard extends StatelessWidget {
               (row) => Padding(
                 padding: const EdgeInsets.symmetric(vertical: 2),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(row.key,
-                        style: AppTypography.bodySm.copyWith(fontSize: 11)),
-                    Text(row.value, style: AppTypography.labelDataSm),
+                    Expanded(
+                      child: Text(
+                        row.key,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: AppTypography.bodySm.copyWith(fontSize: 11),
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Text(
+                        row.value,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        textAlign: TextAlign.right,
+                        style: AppTypography.labelDataSm,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -151,7 +175,7 @@ class _RingPainter extends CustomPainter {
 
     canvas.drawCircle(center, radius, trackPaint);
 
-    const startAngle = -math.pi / 2; // démarre en haut, comme le mock (-90°)
+    const startAngle = -math.pi / 2;
     final sweepAngle = 2 * math.pi * percent;
 
     canvas.drawArc(
