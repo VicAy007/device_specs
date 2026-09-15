@@ -8,7 +8,14 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors._();
 
+
   // Fonds
+  static const Color gain = Color(0xFF22C55E);
+ static const Color loss = Color(0xFFEF4444);
+
+static const Color gainSurface = Color(0x1A22C55E);
+static const Color lossSurface = Color(0x1AEF4444);
+
   static const Color background = Color(0xFF010101);
   static const Color surface = Color(0xFF1E1E1E);
   static const Color surfaceContainerHigh = Color(0xFF272727);

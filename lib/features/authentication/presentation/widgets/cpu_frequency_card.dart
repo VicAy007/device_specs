@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../app/theme/app_colors.dart';
 import '../../../../app/theme/app_typography.dart';
-import '../../domain/entities/device_health.dart';
+import '../../../dashboard/domain/entities/device_health.dart';
 
 /// Carte "Tensor G3 Frequency Map" : mini-graphique de charge CPU +
 /// fréquences des 3 clusters de cœurs (Prime / Performance / Efficiency).
@@ -185,8 +185,8 @@ class _CpuChartPainter extends CustomPainter {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         colors: [
-          Colors.white.withOpacity(0.12),
-          Colors.white.withOpacity(0.0),
+          Colors.white.withValues(alpha: 0.12),
+          Colors.white.withValues(alpha: 0.0),
         ],
       ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
     canvas.drawPath(fillPath, fillPaint);

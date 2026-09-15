@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../../../app/theme/app_colors.dart';
 import '../view_models/dashboard_view_model.dart';
-import '../widgets/battery_card.dart';
-import '../widgets/cpu_frequency_card.dart';
-import '../widgets/dashboard_bottom_nav.dart';
-import '../widgets/dashboard_header.dart';
-import '../widgets/device_summary_card.dart';
-import '../widgets/memory_card.dart';
-import '../widgets/quick_actions_card.dart';
-import '../widgets/storage_card.dart';
-import '../widgets/wifi_card.dart';
+import '../../../../features/authentication/presentation/widgets/battery_card.dart';
+import '../../../../features/authentication/presentation/widgets/cpu_frequency_card.dart';
+import '../../../../features/authentication/presentation/widgets/dashboard_bottom_nav.dart';
+import '../../../../features/authentication/presentation/widgets/dashboard_header.dart';
+import '../../../../features/authentication/presentation/widgets/device_summary_card.dart';
+import '../../../../features/authentication/presentation/widgets/memory_card.dart';
+import '../../../../features/authentication/presentation/widgets/quick_actions_card.dart';
+import '../../../../features/authentication/presentation/widgets/storage_card.dart';
+import '../../../../features/authentication/presentation/widgets/wifi_card.dart';
 
 /// Page "Dashboard" de DeviceSpecs — vue d'ensemble santé système.
 ///
